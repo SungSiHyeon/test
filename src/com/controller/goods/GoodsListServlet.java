@@ -24,6 +24,8 @@ public class GoodsListServlet extends HttpServlet {
 		String gCategory = request.getParameter("gCategory");
 		if(gCategory==null) {
 			gCategory = "top";
+			System.out.println("성공!");
+			
 		}
 		GoodsService service = new GoodsService();
 		List<GoodsDTO> list = service.goodsList(gCategory);
